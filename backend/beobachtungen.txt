@@ -25,3 +25,14 @@ eigenschaften und ähnlichen.
 
 2. db welche für die teamverwaltung zuständig ist kontrolliert. wie im code definiert begrenzt auf 6 
 einträge. 
+
+nach eingehenden fixes erneut (04.08.2026) auf funktion geprüft. aktuell keinerlei auffindbaren auf-
+fälligkeiten und alle funktionen nominal. morgen (05.08.2026) findet die entfernung der artefakte aus
+zeiten des versuches des hostings der datenbanken via aws statt. nach dem debloat kann ich über eine 
+neue funktion und verbesserungen der visuals nachdenken. Stand heute (04.08.2026) debugging betrieben,
+veraltete und nicht benutzte variablen und ähnliches entfernt, code verbessert denn es gab einige 
+kontext fehler und schlechtes handling vom code meinerseits, kommentare zu den änderungen im code
+hinterlegt sowie git.ignore erstellt und projekt in github hochgeladen. aktuell bis auf upload keine
+änderungen in git zu sehen denn die änderungen im code habe ich vor dem upload vorgenommen. bitte
+beachten das beim ersten ausführen die pokedex.db geseedet wird was dauern kann und die db´s sind aus
+speicherplatzgründen absichtlich nicht inbegriffen. 
