@@ -1,0 +1,27 @@
+erzeuge engine was eigentlich für (zumindest glaube ich das) für die verwendungen externer db´s
+verwendet wird. ebenfalls bestehen die links und einlogdaten nicht mehr von der für das programm 
+ursprünglich geplanten aws postgreSQL db´s
+
+in meinen code werden soohl db 1 und 2 initialisiert via code was mich zwecks dies in meinen code zu
+inkludieren wundert was ich da gemacht habe aber weis ebenfalls nicht wie ich die aws db verbindung
+aufbaue, also gut ich weis wie aber habe das leider im code nicht hingekriegt dies anzubinden und die
+kommunikation zu ermöglichen. zum teil glaube ich eben dieses problem gehabt zu haben wegen der initi-
+alisierung lokal auf mein gerät
+
+in zeile 227 der main.py ist ein .get befehl nut das get als fehler deklariert was ich nicht ganz 
+verstehe, gegeben den kontext und rahmen in dem es dennoch bei ausführung problemfrei läuft
+
+in zeile 398-403 befinden sich variablen wie name status und db_item.status auf die scheinbar nicht
+zugegriffen wird was fehler wirft aber auch hier wieder bizarr denn das programm funktioniert wie ge-
+wünscht.
+
+nach eingehender kontrolle des frontend bis auf die zugegeben wiederwärtigen visuals des fertigen
+produktes keinerlei auffälligkeiten.
+
+produkt nochmals auf funktion geprüft und für voll funktionstüchtig befunden. ggf noch methodik der
+datenbeschaffung abändern. denn aktuell wenn nicht bereits vorhanden wird die db beim ersten starten
+und erstellen direkt geseedet mit allen pokemon aus der api und der von mir definierten weiteren 
+eigenschaften und ähnlichen. 
+
+2. db welche für die teamverwaltung zuständig ist kontrolliert. wie im code definiert begrenzt auf 6 
+einträge. 
