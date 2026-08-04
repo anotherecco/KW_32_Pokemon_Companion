@@ -12,6 +12,15 @@ __pycache__/
 .venv/
 venv/
 
+# Environment files
+.env
+.env.*
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
 # Node / Vite
 node_modules/
 dist/
