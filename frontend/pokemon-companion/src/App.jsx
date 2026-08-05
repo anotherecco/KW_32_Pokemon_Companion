@@ -86,6 +86,11 @@ export default function App() {
     }
   }
 
+  const formatListValue = (value) => {
+    if (!value) return 'none'
+    return value.split(',').filter(Boolean).join(', ')
+  }
+
   return (
     <div className="app-shell">
       <header className="hero-card">
@@ -117,10 +122,13 @@ export default function App() {
                 <div>
                   <strong>{item.title}</strong>
                   <small>{item.type}</small>
-                  <div className="details">
-                    <span>Weak: {item.no_damage_to || 'none'}</span>
-                    <span>Resist: {item.half_damage_to || 'none'}</span>
-                    <span>Strong: {item.double_damage_to || 'none'}</span>
+                  <div className="details-grid">
+                    <div className="detail-item"><span className="detail-label">Weak to</span><span>{formatListValue(item.double_damage_from)}</span></div>
+                    <div className="detail-item"><span className="detail-label">Resistant to</span><span>{formatListValue(item.half_damage_from)}</span></div>
+                    <div className="detail-item"><span className="detail-label">Immune to</span><span>{formatListValue(item.no_damage_from)}</span></div>
+                    <div className="detail-item"><span className="detail-label">Strong against</span><span>{formatListValue(item.double_damage_to)}</span></div>
+                    <div className="detail-item"><span className="detail-label">Not very effective against</span><span>{formatListValue(item.half_damage_to)}</span></div>
+                    <div className="detail-item"><span className="detail-label">No effect against</span><span>{formatListValue(item.no_damage_to)}</span></div>
                   </div>
                 </div>
                 <button onClick={() => addToDb2(item)}>Copy to DB2</button>
@@ -145,10 +153,13 @@ export default function App() {
                   <strong>{item.title}</strong>
                   <p className="meta">Type: {item.type || 'unknown'}</p>
                   <p className="meta">Status: {item.status}</p>
-                  <div className="details">
-                    <span>Weak: {item.no_damage_to || 'none'}</span>
-                    <span>Resist: {item.half_damage_to || 'none'}</span>
-                    <span>Strong: {item.double_damage_to || 'none'}</span>
+                  <div className="details-grid">
+                    <div className="detail-item"><span className="detail-label">Weak to</span><span>{formatListValue(item.double_damage_from)}</span></div>
+                    <div className="detail-item"><span className="detail-label">Resistant to</span><span>{formatListValue(item.half_damage_from)}</span></div>
+                    <div className="detail-item"><span className="detail-label">Immune to</span><span>{formatListValue(item.no_damage_from)}</span></div>
+                    <div className="detail-item"><span className="detail-label">Strong against</span><span>{formatListValue(item.double_damage_to)}</span></div>
+                    <div className="detail-item"><span className="detail-label">Not very effective against</span><span>{formatListValue(item.half_damage_to)}</span></div>
+                    <div className="detail-item"><span className="detail-label">No effect against</span><span>{formatListValue(item.no_damage_to)}</span></div>
                   </div>
                 </div>
                 <div className="actions">

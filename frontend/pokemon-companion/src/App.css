@@ -125,12 +125,29 @@ small,
   font-size: 0.95rem;
 }
 
-.details {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 8px;
   color: #b1ff9b;
   font-size: 0.9rem;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: rgba(15, 42, 77, 0.75);
+}
+
+.detail-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #d9ff8a;
 }
 
 .actions {
