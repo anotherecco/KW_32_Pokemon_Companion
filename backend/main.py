@@ -489,6 +489,22 @@ def update_db2_item(item_id: int, item: Db2ItemUpdate, db2: Session = Depends(ge
 
     return {"id": db_item.id, "title": db_item.name, "status": db_item.status}
 
+
+@app.delete("/db2/{item_id}")
+def delete_db2_item(item_id: int, db2: Session = Depends(get_db2)):
+    """Delete a team entry using the same route the frontend already calls."""
+    # The React client sends DELETE requests to /db2/{id}, so this handler must exist
+    # even though the older /items/{id} endpoint is still kept for compatibility.
+    db_item = db2.query(models.team_managment_db).filter(models.team_managment_db.id == item_id).first()
+    if db_item is None:
+        raise HTTPException(status_code=404, detail="Item not found")
+
+    db2.delete(db_item)
+    db2.commit()
+
+    return {"message": "Item successfully deleted"}
+
+
 @app.post("/items/")
 def create_item(item: ItemCreate, db2: Session = Depends(get_db2)):
     """Store one team entry in DB2. Only 6 slots are allowed."""
@@ -520,15 +536,4 @@ def create_item(item: ItemCreate, db2: Session = Depends(get_db2)):
     return db_item
 
 
-@app.delete("/items/{item_id}")
-def delete_item(item_id: int, db2: Session = Depends(get_db2)):
-    """Delete an item from DB2 by ID."""
-    db_item = db2.query(models.team_managment_db).filter(models.team_managment_db.id == item_id).first()
 
-    if db_item is None:
-        raise HTTPException(status_code=404, detail="Item not found")
-
-    db2.delete(db_item)
-    db2.commit()
-
-    return {"message": "Item successfully deleted"}
