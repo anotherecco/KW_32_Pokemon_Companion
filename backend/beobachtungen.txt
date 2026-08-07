@@ -36,3 +36,6 @@ hinterlegt sowie git.ignore erstellt und projekt in github hochgeladen. aktuell 
 änderungen in git zu sehen denn die änderungen im code habe ich vor dem upload vorgenommen. bitte
 beachten das beim ersten ausführen die pokedex.db geseedet wird was dauern kann und die db´s sind aus
 speicherplatzgründen absichtlich nicht inbegriffen. 
+
+nachtrag: bug behoben der eine fehlerhafte adressierung beim delete endpoint hatte was das löschen von 
+einträgen in der team_db zur folge hatte. und danach wieder auf funktion getestet

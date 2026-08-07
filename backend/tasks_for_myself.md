@@ -31,3 +31,6 @@ connect both api´s to react and build a page to house it all if needed use mult
 saving to 2nd db fixed, writing and deleting to 2nd db as well as the max enty cap verified, naming scheme normalized and verified functionality. 
 
 all in all: most functions now verifiable working and i think this is ready to send in. 
+
+task for next week (10.08.2026) containerize application via docker to help with compatability. 
+improve visuals in weboverlay (coloration is kinda trash, gotta rework it entirely and maybe add a background image to it.)
