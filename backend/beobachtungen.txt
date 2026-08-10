@@ -39,3 +39,12 @@ speicherplatzgründen absichtlich nicht inbegriffen.
 
 nachtrag: bug behoben der eine fehlerhafte adressierung beim delete endpoint hatte was das löschen von 
 einträgen in der team_db zur folge hatte. und danach wieder auf funktion getestet
+
+habe ein script zum automatisierten starten der app und öffnen des browsers via nutzung des terminal
+eingebaut und musste aber feststellen das dies nicht wirklich funktioniert hat, stellte sich heraus 
+das ich den fehler gemacht habe das scriptdir nicht festzulegen und ein paar weitere kleinigkeiten.
+musste am ende wegen ratlosigkeit leider ki fix nutzen was mich wieder mal ärgert weil... script dir...
+wieso überseh ich immer so elementare sachen? naja am ende muss ich wahrscheinlich irgendwann noch die 
+path variable zum script festlegen denn aktuell muss man noch in 
+/Users/anotherecco/Desktop/projekt KW28 2026 um das script im terminal mit ./start.sh auszuführen aber
+aktuell reicht dass das es jetzt komplett funktioniert. wie immer auf funktionalität geprüft.
